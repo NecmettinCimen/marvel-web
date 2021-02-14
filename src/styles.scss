@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap.scss";
+
+.linewrap1 {
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.linewrap3 {
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}

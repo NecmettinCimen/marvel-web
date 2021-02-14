@@ -1,0 +1,59 @@
+<div class="wrapper">
+    <div class="page-header page-header-small" filter-color="orange">
+      <div class="page-header-image rellax-header" data-rellax-speed="-8"
+        style="background-image: url('assets/img/bg5.jpg') ;">
+      </div>
+      <div class="container">
+        <div class="content-center">
+          <div class="photo-container">
+            <img [src]="item.image" alt="">
+          </div>
+          <h3 class="title">{{item.name}}</h3>
+          <p class="category">Karakter</p>
+          <div class="content">
+            <div class="social-description">
+              <h2>{{item.comics}}</h2>
+              <p>Çizgi Roman</p>
+            </div>
+            <div class="social-description">
+              <h2>{{item.series}}</h2>
+              <p>Dizi</p>
+            </div>
+            <div class="social-description">
+              <h2>{{item.stories}}</h2>
+              <p>Hikaye</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="button-container">
+          <a [href]="item.detailUrl" target="_blank" class="btn btn-primary btn-round btn-lg">Marvel Profili</a>
+          <a (click)="scroll(detaylar)" #detaylar class="btn btn-default btn-round btn-lg" rel="tooltip" title="Detaylar">
+            Detaylar
+          </a>
+        </div>
+        <h3 class="title">Hakkında</h3>
+        <h5 class="description">{{item.description}}</h5>
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="title text-center">Çizgi Romanlar</h4>
+            <div class="row">
+              <div class="col-md-10 ml-auto mr-auto">
+                <div class="row collections">
+                  <div class="col-md-4" *ngFor="let item of list.results" (click)="goComic(item)" style="cursor:pointer">
+                    <img [src]='item.thumbnail.path+"/standard_amazing."+item.thumbnail.extension' alt="" class="img-raised" style="display: block;
+                    margin: 0 auto;">
+                    <h4 class="title linewrap1" title="{{item.title}}">{{item.title}}</h4>
+                    <p class="description linewrap3" title="{{item.description}}">{{item.description}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

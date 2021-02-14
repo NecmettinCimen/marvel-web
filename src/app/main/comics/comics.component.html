@@ -1,0 +1,50 @@
+<div class="wrapper">
+    <div class="page-header page-header-small">
+        <div class="page-header-image rellax-header" data-rellax-speed="-8"
+            style="background-image: url('assets/img/c6.jpg');">
+        </div>
+        <div class="container">
+            <div class="content-center">
+                <h1 class="title">Çizgi Romanlar</h1>
+                <div class="input-group form-group-no-border input-lg" [ngClass]="{'input-group-focus':focus===true}">
+                    <input type="text" class="form-control" placeholder="Çizgi Roman Ara..." (focus)="focus=true"
+                        (blur)="focus=false" (keydown)="search($event)" (keypress)="search($event)"
+                        (keyup)="search($event)">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-team text-center" #target>
+        <div class="container">
+            <div class="team">
+                <div class="row">
+
+
+                    <div class="col-md-3" *ngFor="let item of data.results">
+                        <div class="team-player" (click)="goDetail(item)" style="cursor:pointer">
+                            <img [src]='item.thumbnail.path+"/landscape_incredible."+item.thumbnail.extension'
+                                [alt]='item.title' class=" img-fluid img-raised">
+                            <h4 class="title linewrap1" title="{{item.title}}">{{item.title}}</h4>
+                            <p class="category text-primary">Çizgi Roman</p>
+                            <p class="description linewrap3" title="{{item.description}}">{{item.description}}</p>
+                            <a href="#" class="btn btn-primary btn-round">Sayfa Sayısı : {{item.pageCount}}</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <ngb-pagination (pageChange)="getData(this.page+1);scroll(target)" [maxSize]="5"
+                            [collectionSize]="data.total" [(page)]="page" aria-label="Default pagination"
+                            class="pagination-primary"></ngb-pagination>
+                    </div>
+                    <div class="col-md-6">
+                        {{page}} / {{data.total}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
