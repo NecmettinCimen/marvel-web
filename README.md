@@ -18,7 +18,7 @@
     <a href="https://github.com/necmettincimen/marvelappangular"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/necmettincimen/marvelappangular">View Demo</a>
+    <a href="https://marvelapp.necmettin.me">View Demo</a>
     ·
     <a href="https://github.com/necmettincimen/marvelappangular/issues">Report Bug</a>
     ·
@@ -63,7 +63,7 @@ Marvel App Anglar
 
 A list of commonly used resources that I find helpful are listed in the acknowledgements.
 
-## Demo
+## Demo https://marvelapp.necmettin.me/
 
 | WEB | 
 | --- | 
