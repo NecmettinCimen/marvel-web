@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  baseUrl:'https://marvelapi.necmettin.me/v1/public'
+  baseUrl:'https://marvel-api.necmettincimen.xyz/v1/public'
 };

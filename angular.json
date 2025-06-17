@@ -96,6 +96,12 @@
               "src/tsconfig.spec.json"
             ],
             "exclude": []
+          },
+          "deploy": {
+            "builder": "angular-cli-ghpages:deploy",
+            "options": {
+              "baseHref": "/marvel-web/"
+            }
           }
         }
       }
